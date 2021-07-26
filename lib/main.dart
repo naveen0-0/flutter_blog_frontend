@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+
 void main(){
   runApp(HomePage());
 }
@@ -14,20 +15,10 @@ class HomePage extends StatelessWidget {
       home: SafeArea(
         child: Scaffold(
           body: Container(
-            child: TextButton(
-              child: Text("Check Backend"),
-              onPressed: (){
-                getResponseFromServer();
-              },
-            ),
+            child: Text("Hello World")
           ),
         ),
       ),
     );
-  }
-
-  void getResponseFromServer() async {
-    http.Response response = await http.get(Uri.parse('https://10.0.2.2:5000'));
-    print(response);
   }
 }
