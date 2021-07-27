@@ -1,24 +1,18 @@
+import 'package:blog/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 
 void main(){
-  runApp(HomePage());
+  runApp(MyApp());
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({ Key? key }) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SafeArea(
-        child: Scaffold(
-          body: Container(
-            child: Text("Hello World")
-          ),
-        ),
-      ),
+      home: WelcomePage()
     );
   }
 }
