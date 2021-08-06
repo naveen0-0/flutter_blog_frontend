@@ -1,3 +1,4 @@
+import 'package:blog/pages/SignIn.dart';
 import 'package:blog/pages/SignUpWithEmail.dart';
 import 'package:flutter/material.dart';
 
@@ -63,11 +64,22 @@ class _WelcomePageState extends State<WelcomePage> {
                   ),
                   ),
                   SizedBox(width: 10,),
-                  Text("SignIn",style: TextStyle(
-                    color: Colors.green,
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold
-                  ),
+                  InkWell(
+                    onTap: (){
+                      Navigator.push(context, 
+                        MaterialPageRoute(
+                          builder: (context){ 
+                            return SignIn();
+                          }
+                        )
+                      );
+                    },
+                      child: Text("SignIn",style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
                   ),
                 ],
               ),
